@@ -55,7 +55,7 @@ export function Header() {
         style={{
           minHeight: "167px",
           backgroundColor: "#353535",
-          backgroundImage: "url('/images/header-bg.webp')",
+          backgroundImage: "url('/osprey-cooling-website/images/header-bg.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",

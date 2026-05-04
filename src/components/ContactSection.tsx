@@ -43,7 +43,7 @@ export function ContactSection() {
       <div
         className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: "url('/images/factory-bg.webp')",
+          backgroundImage: "url('/osprey-cooling-website/images/factory-bg.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           filter: "blur(2px)",

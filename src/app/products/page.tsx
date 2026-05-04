@@ -65,7 +65,7 @@ export default function ProductsPage() {
         className="w-full"
         style={{
           height: "298px",
-          backgroundImage: "url('/images/product-banner.webp')",
+          backgroundImage: "url('/osprey-cooling-website/images/product-banner.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundColor: "#4a6a7a",

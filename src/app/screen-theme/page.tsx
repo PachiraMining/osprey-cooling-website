@@ -117,7 +117,7 @@ function ScreenThemeContent() {
         className="w-full relative flex items-center justify-center"
         style={{
           height: "400px",
-          backgroundImage: "url('/images/themes/screen-banner.webp')",
+          backgroundImage: "url('/osprey-cooling-website/images/themes/screen-banner.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundColor: "#1a0a2e",

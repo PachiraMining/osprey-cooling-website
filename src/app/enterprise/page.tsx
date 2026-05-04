@@ -167,7 +167,7 @@ export default function EnterprisePage() {
                   className="w-full h-full"
                   style={{
                     minHeight: "200px",
-                    backgroundImage: "url('/images/aerial-factory.webp')",
+                    backgroundImage: "url('/osprey-cooling-website/images/aerial-factory.webp')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
