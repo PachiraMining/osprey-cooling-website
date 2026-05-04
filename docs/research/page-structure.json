@@ -1,0 +1,172 @@
+[
+  {
+    "tag": "STYLE",
+    "id": "themeControl",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": ":root {\n\t\t\t--theme-color:#2b2b2b;\n\t\t}\n\t\t.jz_theme_font_color {\n\t\t\tcolor: #2b2b2b;\n\t\t}\n\n\t\t.jz_theme_bg_color {\n\t\t\tbackground-color: #2b2b2b;\n\t\t}\n\n\t\t.jz_theme_border_color {\n\t\t\tborder-color: #2b2b2b;"
+  },
+  {
+    "tag": "DIV",
+    "id": "jzRoot",
+    "className": "jz_root jz_root_pc jz_visitor_web",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 7433,
+    "childCount": 1,
+    "textPreview": "Dongguan Cooling Electronic Technology Co., LtdProfessional Manufacturer Of Computer Accessories, PC Case And Cooling System Solutions  General Manager: Mr. MoWeChat: (+86) 15889308700WhatsAp"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": "window.__INITIAL_STATE__={\"memberLogin\":false,\"currentWebUrl\":\"https://www.lovingcool.com/index.jsp\",\"jzVersion\":12,\"isOverseas\":false,\"colId\":2,\"extId\":0,\"siteVer\":194,\"aid\":28534886,\"lcid\":1033,\"res"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": "window.Hosts = {\"portal\":\"adm.webportal.top\",\"home\":\"\",\"mHome\":\"\",\"jzHome\":\"\",\"jzPortal\":\"i.vip.webportal.top\",\"qzHome\":\"\",\"qzPortal\":\"wxapp.webportal.top\",\"mallHome\":\"\",\"mallPortal\":\"i.mall.vip.webpo"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": "window._resDistRoot = '//1.ss.508sys.com/js/rjs' + '/dist/v2/visitor/';\n\n\t\tFai = {};\n\t\tFai.top = window;\n\t\tRoot = {};\n\t\tJZ = {};\n\t\tComm = {};\n\t\t_temporary = {};    //临时数据T\n\t\tFai.top._curLanCode = '"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": ""
+  },
+  {
+    "tag": "SCRIPT",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": ""
+  },
+  {
+    "tag": "SCRIPT",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": "var __jzFrontendResRoot__ = '//jzfe.faisys.com', __jzFrontendConfVersion__ = '202604301100';"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": ""
+  },
+  {
+    "tag": "SCRIPT",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": ""
+  },
+  {
+    "tag": "SCRIPT",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": ""
+  },
+  {
+    "tag": "LINK",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": ""
+  },
+  {
+    "tag": "SCRIPT",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": ""
+  },
+  {
+    "tag": "SCRIPT",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": ""
+  },
+  {
+    "tag": "DIV",
+    "id": "",
+    "className": "jz_clear",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": ""
+  },
+  {
+    "tag": "STYLE",
+    "id": "",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": ".jz_full_nav_wrap_expend_1.jz_full_nav_wrap_active{\n                    transform: translate3d(0, calc(100% + 0px), 0);\n                }"
+  },
+  {
+    "tag": "IFRAME",
+    "id": "crashIframe",
+    "className": "",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "height": 0,
+    "childCount": 0,
+    "textPreview": ""
+  }
+]
