@@ -3,7 +3,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 interface ThemeItem {
@@ -92,7 +92,7 @@ function ThemeCard({ theme }: { theme: ThemeItem }) {
   );
 }
 
-export default function ScreenThemePage() {
+function ScreenThemeContent() {
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<TabId>("3.5");
 
@@ -162,5 +162,13 @@ export default function ScreenThemePage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function ScreenThemePage() {
+  return (
+    <Suspense>
+      <ScreenThemeContent />
+    </Suspense>
   );
 }
