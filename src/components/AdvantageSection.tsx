@@ -142,9 +142,9 @@ const capabilityCards: CapabilityCard[] = [
 ];
 
 const machinePhotos: MachinePhoto[] = [
-  { src: "/images/machine-winding.webp", label: "WINDING MACHINE", alt: "Winding machine" },
-  { src: "/images/machine-mounter.webp", label: "MOUNTER", alt: "Mounter machine" },
-  { src: "/images/machine-oven.webp", label: "INDUSTRIAL OVEN", alt: "Industrial oven" },
+  { src: "/osprey-cooling-website/images/machine-winding.webp", label: "WINDING MACHINE", alt: "Winding machine" },
+  { src: "/osprey-cooling-website/images/machine-mounter.webp", label: "MOUNTER", alt: "Mounter machine" },
+  { src: "/osprey-cooling-website/images/machine-oven.webp", label: "INDUSTRIAL OVEN", alt: "Industrial oven" },
 ];
 
 // Gray placeholder for missing images
@@ -268,7 +268,7 @@ export function AdvantageSection() {
             <div className="flex-shrink-0 lg:w-[400px]">
               <div className="relative w-full" style={{ height: 300 }}>
                 <SafeImage
-                  src="/images/factory-photo.webp"
+                  src="/osprey-cooling-website/images/factory-photo.webp"
                   alt="Supplier's Company Factory"
                   width={400}
                   height={300}

@@ -8,10 +8,10 @@ interface TeamMember {
 }
 
 const TEAM_MEMBERS: TeamMember[] = [
-  { name: "David Mo",    role: "Manager", src: "/images/team-david.webp", isManager: true },
-  { name: "Joy Liao",   role: null,       src: "/images/team-joy.webp" },
-  { name: "Vince Chen", role: null,       src: "/images/team-vince.webp" },
-  { name: "Zeng Zuming",role: null,       src: "/images/team-zeng.webp" },
+  { name: "David Mo",    role: "Manager", src: "/osprey-cooling-website/images/team-david.webp", isManager: true },
+  { name: "Joy Liao",   role: null,       src: "/osprey-cooling-website/images/team-joy.webp" },
+  { name: "Vince Chen", role: null,       src: "/osprey-cooling-website/images/team-vince.webp" },
+  { name: "Zeng Zuming",role: null,       src: "/osprey-cooling-website/images/team-zeng.webp" },
 ];
 
 function TeamMemberCard({ member }: { member: TeamMember }) {
@@ -62,7 +62,7 @@ export function TeamSection() {
               style={{ width: "80px", height: "80px" }}
             >
               <Image
-                src="/images/team-support-icon.webp"
+                src="/osprey-cooling-website/images/team-support-icon.webp"
                 alt="24/7 support icon"
                 fill
                 sizes="80px"

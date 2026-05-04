@@ -8,9 +8,9 @@ interface Certificate {
 }
 
 const CERTIFICATES: Certificate[] = [
-  { id: 1, src: "/images/cert-1.webp", alt: "Certificate 1", tilt: -4 },
-  { id: 2, src: "/images/cert-2.webp", alt: "Certificate 2", tilt: -2 },
-  { id: 3, src: "/images/cert-3.webp", alt: "Certificate 3", tilt:  1 },
+  { id: 1, src: "/osprey-cooling-website/images/cert-1.webp", alt: "Certificate 1", tilt: -4 },
+  { id: 2, src: "/osprey-cooling-website/images/cert-2.webp", alt: "Certificate 2", tilt: -2 },
+  { id: 3, src: "/osprey-cooling-website/images/cert-3.webp", alt: "Certificate 3", tilt:  1 },
   { id: 4, src: null,                   alt: "Certificate 4", tilt: -1 },
   { id: 5, src: null,                   alt: "Certificate 5", tilt:  3 },
   { id: 6, src: null,                   alt: "Certificate 6", tilt: -2 },
@@ -125,7 +125,7 @@ export function CertificatesSection() {
             style={{ height: "420px", borderRadius: "2px" }}
           >
             <Image
-              src="/images/exhibition.webp"
+              src="/osprey-cooling-website/images/exhibition.webp"
               alt="LovingCool exhibition booth at trade fair"
               fill
               sizes="(max-width: 1200px) 100vw, 1200px"

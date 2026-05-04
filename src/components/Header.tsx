@@ -71,7 +71,7 @@ export function Header() {
               {/* Logo */}
               <div className="shrink-0">
                 <Image
-                  src="/images/osprey-logo-white.png"
+                  src="/osprey-cooling-website/images/osprey-logo-white.png"
                   alt="Osprey Technology"
                   width={100}
                   height={100}

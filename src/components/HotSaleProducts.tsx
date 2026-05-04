@@ -8,13 +8,13 @@ interface Product {
 }
 
 const PRODUCTS: Product[] = [
-  { id: "c-lhy",  name: "C-LHY",    src: "/images/hot-lhy.webp",     alt: "C-LHY Cooler" },
-  { id: "lc-mys", name: "LC-MYS",   src: "/images/hot-mys.webp",     alt: "LC-MYS Cooler" },
-  { id: "lc-pl",  name: "LC-PL",    src: "/images/hot-ak03.webp",     alt: "LC-PL Cooler" },
-  { id: "lc-s",   name: "LC-S",     src: "/images/thumb-lc-s.webp",  alt: "LC-S Cooler" },
-  { id: "lc-rs",  name: "LC-RS",    src: "/images/hot-hja7.webp",    alt: "LC-RS Cooler" },
-  { id: "lc-x",   name: "LC-X",     src: "/images/hot-lcx.webp",     alt: "LC-X Cooler" },
-  { id: "lc-ym",  name: "LC-YM",    src: "/images/hot-lcym.webp",    alt: "LC-YM Cooler" },
+  { id: "c-lhy",  name: "C-LHY",    src: "/osprey-cooling-website/images/hot-lhy.webp",     alt: "C-LHY Cooler" },
+  { id: "lc-mys", name: "LC-MYS",   src: "/osprey-cooling-website/images/hot-mys.webp",     alt: "LC-MYS Cooler" },
+  { id: "lc-pl",  name: "LC-PL",    src: "/osprey-cooling-website/images/hot-ak03.webp",     alt: "LC-PL Cooler" },
+  { id: "lc-s",   name: "LC-S",     src: "/osprey-cooling-website/images/thumb-lc-s.webp",  alt: "LC-S Cooler" },
+  { id: "lc-rs",  name: "LC-RS",    src: "/osprey-cooling-website/images/hot-hja7.webp",    alt: "LC-RS Cooler" },
+  { id: "lc-x",   name: "LC-X",     src: "/osprey-cooling-website/images/hot-lcx.webp",     alt: "LC-X Cooler" },
+  { id: "lc-ym",  name: "LC-YM",    src: "/osprey-cooling-website/images/hot-lcym.webp",    alt: "LC-YM Cooler" },
 ];
 
 function ProductCard({ product }: { product: Product }) {
