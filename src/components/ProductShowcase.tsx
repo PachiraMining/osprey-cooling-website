@@ -1,19 +1,19 @@
 import Image from "next/image";
 
 const SHOWCASE_IMAGES = [
-  { src: "/osprey-cooling-website/images/showcase-1.webp", alt: "Product 1" },
-  { src: "/osprey-cooling-website/images/showcase-2.webp", alt: "Product 2" },
-  { src: "/osprey-cooling-website/images/showcase-3.webp", alt: "Product 3" },
-  { src: "/osprey-cooling-website/images/showcase-4.webp", alt: "Product 4" },
-  { src: "/osprey-cooling-website/images/showcase-5.webp", alt: "Product 5" },
-  { src: "/osprey-cooling-website/images/showcase-6.webp", alt: "Product 6" },
+  { src: "/images/showcase-1.webp", alt: "Product 1" },
+  { src: "/images/showcase-2.webp", alt: "Product 2" },
+  { src: "/images/showcase-3.webp", alt: "Product 3" },
+  { src: "/images/showcase-4.webp", alt: "Product 4" },
+  { src: "/images/showcase-5.webp", alt: "Product 5" },
+  { src: "/images/showcase-6.webp", alt: "Product 6" },
 ] as const;
 
 export function ProductShowcase() {
   return (
     <section className="w-full py-0">
       <div
-        className="mx-auto grid grid-cols-3"
+        className="mx-auto grid grid-cols-2 md:grid-cols-3"
         style={{ maxWidth: "1200px", gap: "10px" }}
       >
         {SHOWCASE_IMAGES.map((image) => (

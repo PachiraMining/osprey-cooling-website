@@ -32,12 +32,12 @@ const techFeatures = [
 ];
 
 const galleryImages = [
-  "/osprey-cooling-website/images/aerial-factory.webp",
-  "/osprey-cooling-website/images/header-bg.webp",
-  "/osprey-cooling-website/images/aerial-factory.webp",
-  "/osprey-cooling-website/images/header-bg.webp",
-  "/osprey-cooling-website/images/aerial-factory.webp",
-  "/osprey-cooling-website/images/header-bg.webp",
+  "/images/header-bg.webp",
+  "/images/header-bg.webp",
+  "/images/header-bg.webp",
+  "/images/header-bg.webp",
+  "/images/header-bg.webp",
+  "/images/header-bg.webp",
 ];
 
 export default function EnterprisePage() {
@@ -167,7 +167,7 @@ export default function EnterprisePage() {
                   className="w-full h-full"
                   style={{
                     minHeight: "200px",
-                    backgroundImage: "url('/osprey-cooling-website/images/aerial-factory.webp')",
+                    backgroundImage: "url('/images/header-bg.webp')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}

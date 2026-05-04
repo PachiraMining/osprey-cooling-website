@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const SLIDES = [
-  "/osprey-cooling-website/images/banner-slide-1.webp",
-  "/osprey-cooling-website/images/banner-slide-2.webp",
-  "/osprey-cooling-website/images/banner-slide-3.webp",
+  "/images/banner-slide-1.webp",
+  "/images/banner-slide-2.webp",
+  "/images/banner-slide-3.webp",
 ] as const;
 
 const SLIDE_DURATION_MS = 5000;

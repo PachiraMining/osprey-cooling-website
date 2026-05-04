@@ -1,81 +1,128 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 interface Product {
-  id: string;
   name: string;
-  src: string | null;
-  alt: string;
+  image: string;
 }
 
 const PRODUCTS: Product[] = [
-  { id: "c-lhy",  name: "C-LHY",    src: "/osprey-cooling-website/images/hot-lhy.webp",     alt: "C-LHY Cooler" },
-  { id: "lc-mys", name: "LC-MYS",   src: "/osprey-cooling-website/images/hot-mys.webp",     alt: "LC-MYS Cooler" },
-  { id: "lc-pl",  name: "LC-PL",    src: "/osprey-cooling-website/images/hot-ak03.webp",     alt: "LC-PL Cooler" },
-  { id: "lc-s",   name: "LC-S",     src: "/osprey-cooling-website/images/thumb-lc-s.webp",  alt: "LC-S Cooler" },
-  { id: "lc-rs",  name: "LC-RS",    src: "/osprey-cooling-website/images/hot-hja7.webp",    alt: "LC-RS Cooler" },
-  { id: "lc-x",   name: "LC-X",     src: "/osprey-cooling-website/images/hot-lcx.webp",     alt: "LC-X Cooler" },
-  { id: "lc-ym",  name: "LC-YM",    src: "/osprey-cooling-website/images/hot-lcym.webp",    alt: "LC-YM Cooler" },
+  { name: "LC-HJ A7", image: "/images/hot-hja7.webp" },
+  { name: "LC-LHY", image: "/images/hot-lhy.webp" },
+  { name: "LC-MYS", image: "/images/hot-mys.webp" },
+  { name: "LC-PL", image: "/images/hot-pl.webp" },
+  { name: "LC-S", image: "/images/hot-lcs.webp" },
+  { name: "LC-RS", image: "/images/hot-lcrs.webp" },
+  { name: "LC-X", image: "/images/hot-lcx.webp" },
+  { name: "LC-YM", image: "/images/hot-lcym.webp" },
+  { name: "LC-AP600", image: "/images/hot-ap600.webp" },
+  { name: "LC-DP01", image: "/images/hot-dp01.webp" },
+  { name: "LC-AK03", image: "/images/hot-ak03.webp" },
+  { name: "LC-D600", image: "/images/hot-d600.webp" },
+  { name: "LC-AP400", image: "/images/hot-ap400.webp" },
+  { name: "LC-HK02", image: "/images/hot-hk02.webp" },
+  { name: "LC-DP02", image: "/images/hot-dp02.webp" },
 ];
 
 function ProductCard({ product }: { product: Product }) {
   return (
     <div
-      className="product-card flex-none flex flex-col items-center cursor-pointer"
-      style={{ width: "250px" }}
+      className="flex-none"
+      style={{ width: "28.5714%" }}
     >
-      {/* Image area with dark background */}
-      <div
-        className="relative w-full flex items-center justify-center bg-[#1a1a1a] overflow-hidden"
-        style={{ height: "300px" }}
-      >
-        {product.src ? (
+      <div className="px-2">
+        <div className="relative w-full" style={{ paddingBottom: "91%" }}>
           <Image
-            src={product.src}
-            alt={product.alt}
+            src={product.image}
+            alt={product.name}
             fill
-            sizes="250px"
-            className="object-contain p-4"
+            sizes="350px"
+            className="object-contain"
           />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-[#212121]">
-            <span className="text-[#444] text-sm font-medium">{product.name}</span>
-          </div>
-        )}
-      </div>
-      {/* Product name label */}
-      <div className="w-full bg-[#111] text-center py-3 px-2">
-        <span className="text-white text-sm font-medium tracking-wide">
+        </div>
+        <p
+          className="text-center mt-2"
+          style={{
+            fontFamily: "微软雅黑, 'Microsoft YaHei', sans-serif",
+            fontSize: "20px",
+            color: "rgba(255, 255, 255, 1)",
+          }}
+        >
           {product.name}
-        </span>
+        </p>
       </div>
     </div>
   );
 }
 
 export function HotSaleProducts() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    let animationId: number;
+    let scrollPos = 0;
+    const speed = 0.5; // px per frame
+
+    const animate = () => {
+      scrollPos += speed;
+      // Reset when scrolled past half (since items are duplicated)
+      const halfWidth = el.scrollWidth / 2;
+      if (scrollPos >= halfWidth) {
+        scrollPos = 0;
+      }
+      el.style.transform = `translateX(-${scrollPos}px)`;
+      animationId = requestAnimationFrame(animate);
+    };
+
+    animationId = requestAnimationFrame(animate);
+
+    // Pause on hover
+    const parent = el.parentElement;
+    const pause = () => cancelAnimationFrame(animationId);
+    const resume = () => { animationId = requestAnimationFrame(animate); };
+    parent?.addEventListener("mouseenter", pause);
+    parent?.addEventListener("mouseleave", resume);
+
+    return () => {
+      cancelAnimationFrame(animationId);
+      parent?.removeEventListener("mouseenter", pause);
+      parent?.removeEventListener("mouseleave", resume);
+    };
+  }, []);
+
+  // Duplicate products for infinite scroll effect
+  const allProducts = [...PRODUCTS, ...PRODUCTS];
+
   return (
     <section className="w-full bg-black py-12">
-      <div className="mx-auto px-4" style={{ maxWidth: "1200px" }}>
-        {/* Section title with teal decorative lines */}
-        <h2
-          className="section-title-deco text-white text-xl font-semibold tracking-widest mb-10"
-          style={{ fontFamily: '"Microsoft YaHei", "微软雅黑", sans-serif' }}
-        >
-          • Hot-sale&nbsp;product •
-        </h2>
+      <div className="mx-auto" style={{ maxWidth: "1200px" }}>
+        {/* Section title image */}
+        <div className="flex justify-center mb-10">
+          <Image
+            src="/images/cert-badges.webp"
+            alt="Hot-sale product"
+            width={578}
+            height={89}
+            className="object-contain"
+          />
+        </div>
 
-        {/* Horizontal scrolling product row */}
-        <div
-          className="flex gap-4 overflow-x-auto pb-4"
-          style={{
-            scrollbarWidth: "thin",
-            scrollbarColor: "#444 #1a1a1a",
-            WebkitOverflowScrolling: "touch",
-          } as React.CSSProperties}
-        >
-          {PRODUCTS.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+        {/* Auto-scrolling carousel */}
+        <div className="overflow-hidden">
+          <div
+            ref={scrollRef}
+            className="flex"
+            style={{ willChange: "transform" }}
+          >
+            {allProducts.map((product, i) => (
+              <ProductCard key={`${product.name}-${i}`} product={product} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

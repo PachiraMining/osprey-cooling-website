@@ -9,12 +9,12 @@ interface Category {
 }
 
 const categories: Category[] = [
-  { title: "COOLING FAN", image: "/osprey-cooling-website/images/cat-cooling-fan.webp", href: "#" },
-  { title: "CPU HEAT SINK", image: "/osprey-cooling-website/images/cat-cpu-heatsink.webp", href: "#" },
-  { title: "LIQUID COOLING", image: "/osprey-cooling-website/images/cat-liquid-cooling.webp", href: "#" },
-  { title: "COMPUTER CASE", image: "/osprey-cooling-website/images/cat-computer-case.webp", href: "#" },
-  { title: "POWER SUPPLY", image: "/osprey-cooling-website/images/cat-power-supply.webp", href: "#" },
-  { title: "RGB CABLE", image: "/osprey-cooling-website/images/cat-rgb-cable.webp", href: "#" },
+  { title: "COOLING FAN", image: "/images/cat-cooling-fan.webp", href: "#" },
+  { title: "CPU HEAT SINK", image: "/images/cat-cpu-heatsink.webp", href: "#" },
+  { title: "LIQUID COOLING", image: "/images/cat-liquid-cooling.webp", href: "#" },
+  { title: "COMPUTER CASE", image: "/images/cat-computer-case.webp", href: "#" },
+  { title: "POWER SUPPLY", image: "/images/cat-power-supply.webp", href: "#" },
+  { title: "RGB CABLE", image: "/images/cat-rgb-cable.webp", href: "#" },
 ];
 
 function CategoryCard({ category }: { category: Category }) {
@@ -68,12 +68,16 @@ export function ProductCategory() {
   return (
     <section style={{ backgroundColor: "#212121" }} className="py-10">
       <div className="mx-auto px-4" style={{ maxWidth: "1200px" }}>
-        {/* Section title with decorative lines */}
-        <h2
-          className="section-title-deco text-white font-bold text-xl uppercase tracking-widest mb-8"
-        >
-          • Product Category •
-        </h2>
+        {/* Section title image */}
+        <div className="flex justify-center mb-8">
+          <Image
+            src="/images/cert-oem.webp"
+            alt="Product Category"
+            width={578}
+            height={89}
+            className="object-contain"
+          />
+        </div>
 
         {/* 3x2 grid of category cards */}
         <div

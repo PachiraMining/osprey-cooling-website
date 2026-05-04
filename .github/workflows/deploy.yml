@@ -26,7 +26,16 @@ jobs:
           cache: "npm"
 
       - run: npm ci
+
+      # Prefix all image paths for GitHub Pages subdirectory
+      - name: Fix image paths for production
+        run: |
+          find src -name "*.tsx" -exec sed -i "s|'/images/|'/osprey-cooling-website/images/|g" {} \;
+          find src -name "*.tsx" -exec sed -i 's|"/images/|"/osprey-cooling-website/images/|g' {} \;
+
       - run: npm run build
+        env:
+          NODE_ENV: production
 
       - uses: actions/upload-pages-artifact@v3
         with:

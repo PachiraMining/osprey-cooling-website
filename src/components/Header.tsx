@@ -41,6 +41,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Curved theme", href: "/screen-theme?tab=curved" },
     ],
   },
+  { label: "Join Us", href: "/about" },
 ];
 
 export function Header() {
@@ -53,123 +54,109 @@ export function Header() {
       <div
         className="w-full"
         style={{
-          minHeight: "167px",
+          minHeight: "149px",
           backgroundColor: "#353535",
-          backgroundImage: "url('/osprey-cooling-website/images/header-bg.webp')",
+          backgroundImage: "url('/images/header-bg.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div
-          className="mx-auto flex items-center justify-between px-4"
-          style={{ maxWidth: "1200px", minHeight: "167px" }}
+          className="flex items-start"
+          style={{ minHeight: "149px", margin: "0 2.6%", paddingTop: "0.47vw" }}
         >
-          {/* Left: Logo + Title + Cert badges */}
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-4">
+          {/* Left col (jz_col_7): Logo + Title */}
+          <div className="flex-[7]">
+            <div
+              className="flex items-center"
+              style={{ height: "128px" }}
+            >
               {/* Logo */}
-              <div className="shrink-0">
+              <div className="shrink-0" style={{ width: "123px", marginRight: "9px" }}>
                 <Image
-                  src="/osprey-cooling-website/images/osprey-logo-white.png"
+                  src="/images/osprey-logo-white.png"
                   alt="Osprey Technology"
-                  width={100}
-                  height={100}
-                  className="object-contain"
+                  width={682}
+                  height={709}
+                  className="w-full h-auto object-contain"
                 />
               </div>
 
               {/* Company name */}
-              <div className="flex flex-col gap-1">
+              <div>
                 <h1
-                  className="font-bold text-white leading-tight"
+                  className="font-bold text-white"
                   style={{
                     fontSize: "24px",
-                    fontFamily: "'Microsoft YaHei', sans-serif",
+                    fontFamily: "inherit",
+                    lineHeight: 1.5,
                   }}
                 >
                   Osprey Technology Co., Ltd
                 </h1>
                 <p
-                  className="leading-snug"
                   style={{
-                    fontSize: "14px",
+                    fontSize: "16px",
                     color: "#64B5F6",
-                    fontFamily: "'Microsoft YaHei', sans-serif",
+                    fontFamily: "inherit",
+                    lineHeight: 1.5,
                   }}
                 >
                   Professional Manufacturer Of Computer Accessories, PC Case And Cooling System Solutions
                 </p>
               </div>
             </div>
-
-{/* Cert badges removed */}
           </div>
 
-          {/* Right: Contact info */}
+          {/* Right col (jz_col_5): Contact info */}
           <div
-            className="text-white text-right shrink-0"
-            style={{
-              fontSize: "14px",
-              fontFamily: "'Microsoft YaHei', sans-serif",
-              lineHeight: "1.8",
-            }}
+            className="flex-[5] flex justify-end"
+            style={{ marginTop: "0.57vw" }}
           >
-            <p>
-              <span className="opacity-80">General Manager:</span> Mr. Jing
-            </p>
-            <p>
-              <span className="opacity-80">WeChat:</span> (+86) 15889308700
-            </p>
-            <p>
-              <span className="opacity-80">WhatsApp:</span> (+86)15889308700
-            </p>
-            <p>
-              <span className="opacity-80">Email:</span>{" "}
-              <a
-                href="mailto:jing.zeng@dracaena.io"
-                className="hover:underline"
-              >
-                jing.zeng@dracaena.io
-              </a>
-            </p>
-            <p>
-              <span className="opacity-80">After-sales Hotline:</span>{" "}
-              15322234044
-            </p>
-            <p className="opacity-60 text-xs">
-              (AM 9:30-11:30 ; PM 14:00-17:30)
-            </p>
+            <div
+              style={{
+                fontSize: "14px",
+                lineHeight: "25px",
+                fontFamily: "inherit",
+              }}
+            >
+              <div><span className="text-white">General Manager:</span> <span style={{ color: "#dedede" }}>Mr. Jing</span></div>
+              <div><span className="text-white">WeChat: (</span><span style={{ color: "#dedede" }}>+86) 15889308700</span></div>
+              <div><span className="text-white">WhatsApp: (</span><span style={{ color: "#dedede" }}>+86)15889308700</span></div>
+              <div><span className="text-white">Email:</span> <span style={{ color: "#dedede" }}><a href="mailto:jing.zeng@dracaena.io" className="hover:underline" style={{ color: "#dedede" }}>jing.zeng@dracaena.io</a></span></div>
+              <div><span className="text-white">After-sales Hotline: 15322234044    </span><span className="text-white" style={{ fontSize: "16px", fontFamily: "inherit" }}>(AM 9:30-11:30 ; PM 14:00-17:30)</span></div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Row 2 — Navigation */}
-      <div className="w-full" style={{ height: "65px", backgroundColor: "#212121" }}>
+      <div className="w-full" style={{ height: "62px", backgroundColor: "#212121" }}>
         <div
-          className="mx-auto flex items-center justify-between h-full px-4"
-          style={{ maxWidth: "1200px" }}
+          className="mx-auto flex items-center h-full px-4"
+          style={{ maxWidth: "1400px" }}
         >
-          {/* Nav items */}
-          <nav className="flex items-center h-full">
+          {/* Nav items - spread evenly */}
+          <nav className="flex items-center h-full flex-1">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
               return (
-                <div key={item.label} className="relative h-full group">
+                <div key={item.label} className="relative h-full group flex-1">
                   <Link
                     href={item.href}
                     className={cn(
                       "flex items-center justify-center h-full transition-colors",
                       isActive
                         ? "text-white"
-                        : "text-white/90 hover:text-white hover:bg-[#64B5F6]"
+                        : "text-white hover:bg-[#64B5F6]"
                     )}
                     style={{
-                      fontSize: "14px",
-                      fontFamily: "'Microsoft YaHei', sans-serif",
+                      fontSize: "20px",
+                      fontFamily: "微软雅黑, 'Microsoft YaHei', sans-serif",
                       fontWeight: 700,
-                      width: "174px",
                       borderRadius: "4px",
+                      whiteSpace: "nowrap",
                       ...(isActive
                         ? { backgroundColor: "#64B5F6" }
                         : {}),

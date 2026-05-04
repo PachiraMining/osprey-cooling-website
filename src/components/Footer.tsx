@@ -168,7 +168,7 @@ export function Footer() {
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: "url('/osprey-cooling-website/images/city-skyline.webp')",
+            backgroundImage: "url('/images/city-skyline.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center right",
           }}
@@ -216,7 +216,7 @@ export function Footer() {
             <div
               className="hidden md:block w-64 h-32 rounded overflow-hidden shrink-0"
               style={{
-                backgroundImage: "url('/osprey-cooling-website/images/aerial-factory.webp')",
+                backgroundImage: "url('/images/header-bg.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}

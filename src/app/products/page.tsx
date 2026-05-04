@@ -8,22 +8,22 @@ interface Product {
 }
 
 const PC_CASE_FAN_PRODUCTS: Product[] = [
-  { name: "LC-D1200", image: "/osprey-cooling-website/images/products/LC-D1200.webp" },
-  { name: "JH-1200", image: "/osprey-cooling-website/images/products/JH-1200.webp" },
-  { name: "YD-1200", image: "/osprey-cooling-website/images/products/YD-1200.webp" },
-  { name: "LC-1200", image: "/osprey-cooling-website/images/products/LC-1200.webp" },
-  { name: "LJ Pro-1200", image: "/osprey-cooling-website/images/products/LJ-Pro-1200.webp" },
-  { name: "YM-1200", image: "/osprey-cooling-website/images/products/YM-1200.webp" },
-  { name: "LJ2-1200", image: "/osprey-cooling-website/images/products/LJ2-1200.webp" },
-  { name: "BZ-1200", image: "/osprey-cooling-website/images/products/BZ-1200.webp" },
-  { name: "MJ-120", image: "/osprey-cooling-website/images/products/MJ-120.webp" },
-  { name: "JW-120", image: "/osprey-cooling-website/images/products/JW-120.webp" },
-  { name: "MF-1200", image: "/osprey-cooling-website/images/products/MF-1200.webp" },
-  { name: "SGQ-1200", image: "/osprey-cooling-website/images/products/SGQ-1200.webp" },
-  { name: "DJGQ-1200", image: "/osprey-cooling-website/images/products/DJGQ-1200.webp" },
-  { name: "WGQ-1200", image: "/osprey-cooling-website/images/products/WGQ-1200.webp" },
-  { name: "BJ-1200", image: "/osprey-cooling-website/images/products/BJ-1200.webp" },
-  { name: "LK-120", image: "/osprey-cooling-website/images/products/LK-120.webp" },
+  { name: "LC-D1200", image: "/images/products/LC-D1200.webp" },
+  { name: "JH-1200", image: "/images/products/JH-1200.webp" },
+  { name: "YD-1200", image: "/images/products/YD-1200.webp" },
+  { name: "LC-1200", image: "/images/products/LC-1200.webp" },
+  { name: "LJ Pro-1200", image: "/images/products/LJ-Pro-1200.webp" },
+  { name: "YM-1200", image: "/images/products/YM-1200.webp" },
+  { name: "LJ2-1200", image: "/images/products/LJ2-1200.webp" },
+  { name: "BZ-1200", image: "/images/products/BZ-1200.webp" },
+  { name: "MJ-120", image: "/images/products/MJ-120.webp" },
+  { name: "JW-120", image: "/images/products/JW-120.webp" },
+  { name: "MF-1200", image: "/images/products/MF-1200.webp" },
+  { name: "SGQ-1200", image: "/images/products/SGQ-1200.webp" },
+  { name: "DJGQ-1200", image: "/images/products/DJGQ-1200.webp" },
+  { name: "WGQ-1200", image: "/images/products/WGQ-1200.webp" },
+  { name: "BJ-1200", image: "/images/products/BJ-1200.webp" },
+  { name: "LK-120", image: "/images/products/LK-120.webp" },
 ];
 
 function ProductCard({ product }: { product: Product }) {
@@ -65,7 +65,7 @@ export default function ProductsPage() {
         className="w-full"
         style={{
           height: "298px",
-          backgroundImage: "url('/osprey-cooling-website/images/product-banner.webp')",
+          backgroundImage: "url('/images/product-banner.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundColor: "#4a6a7a",
@@ -98,8 +98,7 @@ export default function ProductsPage() {
           style={{ maxWidth: "1200px" }}
         >
           <div
-            className="grid gap-6 mt-6"
-            style={{ gridTemplateColumns: "repeat(4, 1fr)" }}
+            className="grid gap-6 mt-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           >
             {PC_CASE_FAN_PRODUCTS.map((product) => (
               <ProductCard key={product.name} product={product} />
