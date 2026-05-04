@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   output: "export",
+  basePath: "/osprey-cooling-website",
+  assetPrefix: "/osprey-cooling-website/",
 };
 
 export default nextConfig;
