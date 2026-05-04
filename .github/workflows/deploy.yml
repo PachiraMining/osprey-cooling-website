@@ -32,6 +32,8 @@ jobs:
         run: |
           find src -name "*.tsx" -exec sed -i "s|'/images/|'/osprey-cooling-website/images/|g" {} \;
           find src -name "*.tsx" -exec sed -i 's|"/images/|"/osprey-cooling-website/images/|g' {} \;
+          find src -name "*.tsx" -exec sed -i 's|\x60/images/|\x60/osprey-cooling-website/images/|g' {} \;
+          find src -name "*.ts" -exec sed -i 's|"/images/|"/osprey-cooling-website/images/|g' {} \;
 
       - run: npm run build
         env:
